@@ -46,4 +46,9 @@ atlanta.dar_likes()
 filmes_series = [vingadores, atlanta]
 
 for programa in filmes_series:
-    print(f"Nome: {programa.nome} - Likes {programa.likes}")
+    if hasattr(programa, 'duracao'):
+        detalhe = f'{programa.duracao}'
+    else:
+        detalhe = f'{programa.temporadas}'
+
+    print(f"Nome: {programa.nome} - {detalhe} - Likes {programa.likes}")
