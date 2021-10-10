@@ -43,6 +43,7 @@ vingadores.dar_likes()
 atlanta.dar_likes()
 atlanta.dar_likes()
 
-print(f"Nome: {vingadores.nome} - Likes: {vingadores.likes}")
-print(f"Nome: {atlanta.nome} - Likes: {atlanta.likes}")
+filmes_series = [vingadores, atlanta]
 
+for programa in filmes_series:
+    print(f"Nome: {programa.nome} - Likes {programa.likes}")
