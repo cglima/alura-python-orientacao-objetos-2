@@ -52,12 +52,7 @@ class Playlist:
     def __getitem__(self, item):
         return self._programas[item]
 
-    @property
-    def listagem(self):
-        return self._programas
-
-    @property
-    def tamanho(self):
+    def __len__(self):
         return len(self._programas)
 
 
@@ -82,7 +77,7 @@ playlist_fim_semana = Playlist('fim de semana', filmes_series)
 for programa in playlist_fim_semana:
     print(programa)
 
-print(f'tamanho da playlist: {len(playlist_fim_semana.listagem)}')
+print(f'tamanho da playlist: {len(playlist_fim_semana)}')
 
 """ DUCK TYPING - No Python, não é preciso herdar de uma classe específica pra ter polimorfismo. 
 O que é importante no Python é: se você quer um iterável, deve-se preocupar com o que um iterável deve fazer.
